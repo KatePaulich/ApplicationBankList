@@ -1,0 +1,38 @@
+create database Bank_list CHARACTER SET utf8;
+use Bank_list;
+
+CREATE TABLE users(
+	userid INT NOT NULL AUTO_INCREMENT,
+    nameuser VARCHAR(45),
+ 	surNameuser VARCHAR(45),
+    PRIMARY KEY(userid)
+);
+insert into users (nameuser, surNameuser) values ("Adrian", "Holmes");
+insert into users (nameuser, surNameuser) values ("Dianne", "Brook");
+insert into users (nameuser, surNameuser) values ("James", "Allford");
+insert into users (nameuser, surNameuser) values ("Ophelia", "Stevenson");
+insert into users (nameuser, surNameuser) values ("Matthew", "Turner");
+insert into users (nameuser, surNameuser) values ("Scott", "Bush");
+insert into users (nameuser, surNameuser) values ("Thomas", "Little");
+insert into users (nameuser, surNameuser) values ("Victor", "Bishop");
+insert into users (nameuser, surNameuser) values ("Roger", "Gill");
+insert into users (nameuser, surNameuser) values ("Pamela", "Fletcher");
+select * from users;
+
+CREATE TABLE account(
+	accountid INT NOT NULL AUTO_INCREMENT,
+    account INT,
+ 	userid INT,
+    PRIMARY KEY(accountid)
+);
+insert into account (account, userid) values (100, 1);
+insert into account (account, userid) values (160, 2);
+insert into account (account, userid) values (500, 3);
+insert into account (account, userid) values (0, 4);
+insert into account (account, userid) values (1000, 5);
+insert into account (account, userid) values (120, 6);
+insert into account (account, userid) values (650, 7);
+insert into account (account, userid) values (60, 8);
+insert into account (account, userid) values (400, 9);
+insert into account (account, userid) values (500, 10);
+select * from account;
